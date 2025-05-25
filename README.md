@@ -63,3 +63,18 @@ Privacy information can be found at https://privacy.microsoft.com/en-us/
 
 Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
 or trademarks, whether by implication, estoppel or otherwise.
+
+
+Sean's notes:
+
+1. https://github.com/MicrosoftDocs/mslearn-tailspin-spacegame-web/issues/7986
+wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+chmod +x ./dotnet-install.sh
+./dotnet-install.sh --version latest
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+
+2. https://learn.microsoft.com/en-us/training/modules/create-a-build-pipeline/3-build-locally?pivots=github-codespaces-agent
+dotnet build --configuration Release
+dotnet run --configuration Release --no-build --project Tailspin.SpaceGame.Web
